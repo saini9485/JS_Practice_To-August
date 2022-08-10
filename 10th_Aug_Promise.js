@@ -43,27 +43,51 @@
    //1.let's create a scenario 
    // hotels food ordering process
    //process => entering hotel->oder food->food is prepared -> delivered food-> eating-> payment
-function foodPrepared (startEating){
-    setTimeout (()=>{
-        console.log("food getting  prepared")
-        console.log("delivered food")
-        startEating()
-    },1000)
-}
+// function foodPrepared (startEating){
+//     setTimeout (()=>{
+//         console.log("food getting  prepared")
+//         console.log("delivered food")
+//         startEating()
+//     },1000)
+// }
 
-function eatingFood (){
-    setTimeout (()=>{
-        console.log("eating")
-        console.log("payment")
-    },5000)
-}
+// function eatingFood (){
+//     setTimeout (()=>{
+//         console.log("eating")
+//         console.log("payment")
+//     },5000)
+// }
 
-   function hotelVisit (){
-   console.log("entering hotel")
-   console.log("oder food")
-   foodPrepared(eatingFood)//foodPrepared is HOF and eatingFood is callBack function
-}
-hotelVisit()
+//    function hotelVisit (){
+//    console.log("entering hotel")
+//    console.log("oder food")
+//    foodPrepared(eatingFood)//foodPrepared is HOF and eatingFood is callBack function
+// }
+// hotelVisit()
  //2.let's create a scenario 
  //enter userId=> calling my database with userId -> got the  user data -> displaying the user data in github
- 
+ function getuser(id,callback){
+    setTimeout(()=>{
+        let user = {id:id,username:"Rajesh9485"}
+        callback (user)
+        console.log("reading data from database")
+    },1000)
+    }
+    
+    let displayUser= (userData)=>{
+        console.log(userData)
+    }
+    
+    console.log("before")
+    let gituser = getuser(1,displayUser)
+    console.log("after")
+
+
+
+
+//asychronuos programming 
+// //promises
+//  let promises = new promise (( resolve , reject)=>{
+// // resolve()
+// // reject()
+//  })
