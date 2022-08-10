@@ -12,7 +12,7 @@
 // function getData(){
 // setTimeout (()=>{
 // console.log("reading data")
-// return {id:244 ,githubUserName:Rajesh}
+// return {id:244 ,githubUserName:"Rajesh"}
 // },2000)
 // }
 // console.log("before")
@@ -40,7 +40,7 @@
 //     console.log("after")
     //getData is HOF and function is call back function 
    // now it is also synchronus because it not wait still 
-   //let's create a scenario 
+   //1.let's create a scenario 
    // hotels food ordering process
    //process => entering hotel->oder food->food is prepared -> delivered food-> eating-> payment
 function foodPrepared (startEating){
@@ -62,7 +62,8 @@ function eatingFood (){
    console.log("entering hotel")
    console.log("oder food")
    foodPrepared(eatingFood)//foodPrepared is HOF and eatingFood is callBack function
-   
-  
 }
 hotelVisit()
+ //2.let's create a scenario 
+ //enter userId=> calling my database with userId -> got the  user data -> displaying the user data in github
+ 
