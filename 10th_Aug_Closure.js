@@ -25,12 +25,12 @@ function counter (){
   //because it will every time diffent deffent  memory
   
   // 
-  var  count = 1;
-  function counter (){
-      count++;
-    console.log(count)
+  // var  count = 1;
+  // function counter (){
+  //     count++;
+  //   console.log(count)
     
-    }
-    counter()
-    counter()
-    counter()
+  //   }
+  //   counter()
+  //   counter()
+  //   counter()
