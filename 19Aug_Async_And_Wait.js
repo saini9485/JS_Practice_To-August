@@ -34,7 +34,7 @@
 //Example Async wait :- 
 async function getData (){
     let handlePromise = new Promise ((resolve , reject)=>{
-     handlePromise = new Promise (()=>{
+    //  handlePromise = new Promise (()=>{
         setTimeout(()=>{
             resolve ("all done")
         },1000)
@@ -43,6 +43,6 @@ async function getData (){
 
     let result = await  handlePromise;
     console.log(result)
-})
+//})
 }
 getData()
