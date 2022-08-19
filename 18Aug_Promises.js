@@ -25,4 +25,5 @@ console.log(value)
 })
 Promise2.catch ((value)=>{
 console.log(value)
-}) 
+}) //successful => because whe it will find resolve it will not go have 
+//reject it will automatic understand there is no present reject 
