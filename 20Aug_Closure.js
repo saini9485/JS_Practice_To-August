@@ -196,5 +196,22 @@ function adder(a) {
 var add5 = adder(5);
 var add10 = adder(10);
 
-add5(10); //15
+add5(10); //15 
 add10(10); //20
+
+example:-12
+
+var minus = (function () {
+  var counter = 999;
+  return function () {
+    counter -= 1;
+    return counter;
+  
+  };
+ 
+})();
+console.log(counter)
+
+minus();
+minus();
+minus();//96
