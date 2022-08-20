@@ -45,7 +45,8 @@ example:-1
 //     innerFunction ()
 // }
 // outerFunction (5)
-//example:
+example:-2
+
 // 2 . Lost in parameters
 // (function immediateA(a) {
 //     return (function immediateB(b) {   //this is called closure 
@@ -210,8 +211,8 @@ var minus = (function () {
   };
  
 })();
-console.log(counter)
 
 minus();
 minus();
 minus();//96
+
