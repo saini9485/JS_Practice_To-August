@@ -12,7 +12,7 @@
 example:-1
 
 // d = 5
-// function outerFunction (a){
+// function outerFunction (a){ 
 // let b = 10;
 // {
 //     function innerFunction (){
@@ -153,7 +153,7 @@ example:-8
 // console.log(outer());//1,2
 
 
-// example:- 9
+example:- 9
 
 // function outer() {
 //   let counter = 0;
@@ -176,11 +176,11 @@ example:-8
 
 example:-10
 
-// for (var i = 0; i < 3; i++) {
-//   setTimeout(function() { 
-//     console.log (i);
-//    }, 1000 +i);
-// }//
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() { 
+    console.log (i);
+   }, 1000 +i);
+}//
 
 example:-11
 
