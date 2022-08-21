@@ -48,16 +48,31 @@
 // this.age = age
 // }
 
-
-function Person (first , last , age) {
+example:-1
+//constructor function 
+function Person (first , last , age, Address) {
     this.firstName = first   // this is called properties
     this.lastName = last
     this.age = age
+    this.Address = Address
+
+    // we want  to add somethings new 
+    this.add = function (){     //method => jb kisi object ke ander function declear krte hai to use method bolte hai   
+        alter("hi")
     }
 
- let person1 = new Person ( "Rajesh" , "Saini",23)   
+// we want to change age with the help of method 
+this.changeAge = function (newAge){
+this.age = newAge
+}
+    }
+
+ let person1 = new Person ( "Rajesh" , "Saini", 23 , "india")   
  console.log(person1)
 
+ person1.changeAge(20)
 
- let person2 = new Person ( "virendra" , "verma",21)   
+ let person2 = new Person ( "virendra" , "verma", 21 , "india")   
  console.log(person2)
+
+//how to use  
