@@ -45,9 +45,107 @@ example:-2
 // console.log(myFather.nationality) //English
 
 // Structure of prototype
-Array.prototype.myFunction = function (){
-    console.log(this)
-}
-let arr = [1,2,3,4,5]
-arr.myFunction()
 
+// Array.prototype.myFunction = function (){
+//     console.log(this)
+// }
+// let arr = [1,2,3,4,5]
+// arr.myFunction()
+
+example:-1
+//map polyfills
+// prototype With Map function 
+
+// Array.prototype.myMap = function (callbackfn){
+//     console.log(this)
+//     let newArray = []
+//     for(let i = 0; i<this.length; i++)
+//     newArray.push(callbackfn(this[i]))
+// }
+
+// return newArray;
+
+// let nums = [1,2,3,4,5];
+// let result = nums.myMap(function (num){
+//     console.log(num)
+//     return num*2
+// })
+// console.log(result)
+
+
+example:-2
+//map:- OR:- the map method is use  for creating new array from exiting array
+// by applying function to each one of the element of the first array
+
+// Normal Map Method :-
+// let  arr = [1,2,3,4,5]
+// let multiplyTwo = arr.map((num)=>{
+//     return num*2
+// })
+// console.log(multiplyTwo) //2,4,6,8,10
+
+//Map with prototype:-
+
+// Array.prototype.myMap = function (callbackfn){
+//     let newArr = []
+//     for(let i =0 ; i<this.length ; i++){
+//         newArr.push(callbackfn(this[i]))
+
+//     }
+//     return newArr
+// }
+// function square (x){ 
+//     return x*x;
+// }
+
+// let arr = [1,2,3,4,5]
+// let mappedArr = arr.myMap(square)
+// console.log(mappedArr)
+
+example:-2
+//Prototype with Filter
+//Filter:- Filter:- the filter method takes each element in a array and apply a it
+//   conditional statement againts that 
+// If the conditional returns true the element get pushed into output array ,
+//  if conditional is false then element does’t get push into the output array 
+// Fitler return only those element from the array whice fullfilled  provided those 
+//  creatria 
+
+
+// //normal Filter
+// let arr = [1,2,3,4,5]
+// let moreThanTwo = arr.filter((num)=>{
+//     return num>2
+// })
+// console.log(moreThanTwo)
+
+//Prototype Filter
+// Array.prototype.myFilter = function (callbackfn) {
+//     let newArr = []
+//     for (let i = 0; i<this.length; i++){
+//         if(isEven(this[i]))
+//     newArr.push(callbackfn(this[i]))
+
+// }
+// return newArr;
+// }
+// function isEven (x){
+// return x%2==0
+// }
+// let arr = [1,2,3,4,5,2,16,7,9]
+// let filterArr = arr.myFilter(isEven)
+// console.log(filterArr)
+
+example:-3
+//prototype with Reduce
+//Reduce:- The reduce() method runs a function on each array element
+// to produce (reduce it to) a single value.
+
+//Normal Reduce:-
+let arr = [1,2,3,4,5]
+let sum = arr.reduce((acc ,curr =0) => {
+return acc+curr;
+},0)
+console.log(sum)
+
+//Reduce with Prototype:-
