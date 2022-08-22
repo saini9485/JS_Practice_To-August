@@ -166,7 +166,7 @@ example:- 9
 //   return incrementCounter;
 // }
 
-// let myFunc = outer();
+// let myFunc = outer(); 
 // console.log(myFunc());
 // console.log(myFunc());
 
@@ -179,12 +179,12 @@ example:-10
 for (var i = 0; i < 3; i++) {
   setTimeout(function() { 
     console.log (i);
-   }, 1000 +i);
+   }, 1000 +i); // 3 3 3 
 }//
 
-example:-11
+example:-11   
 
-// Outer function
+// Outer function 
 function adder(a) {
   // Inner function/Closure
   function add(b) {
@@ -195,10 +195,10 @@ function adder(a) {
 }
 
 var add5 = adder(5);
-var add10 = adder(10);
+var add10 = adder(10); 
 
 add5(10); //15 
-add10(10); //20
+add10(10); //20 
 
 example:-12
 
@@ -206,13 +206,15 @@ var minus = (function () {
   var counter = 999;
   return function () {
     counter -= 1;
-    return counter;
-  
+    return counter; 
+    
   };
  
 })();
 
+minus(); 
 minus();
-minus();
-minus();//96
+minus();//996  
+
+
 
