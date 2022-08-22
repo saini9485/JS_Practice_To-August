@@ -140,10 +140,16 @@ example: -3;
 // to produce (reduce it to) a single value.
 
 //Normal Reduce:-
-let arr = [1, 2, 3, 4, 5];
-let sum = arr.reduce((acc, curr = 0) => {
-  return acc + curr;
-}, 0);
-console.log(sum);
+// let arr = [1, 2, 3, 4, 5];
+// let sum = arr.reduce((acc, curr = 0) => {
+//   return acc + curr;
+// }, 0);
+// console.log(sum);
 
-//Reduce with Prototype:-
+//Reduce with Prototype:- 
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() { 
+    console.log (i);
+   }, 1000 +i); // 3 3 3 
+}//
+
