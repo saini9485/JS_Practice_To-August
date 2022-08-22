@@ -5,18 +5,18 @@
 //   (this.FirstName = firstName),
 //     (this.LastName = lastName), //properties
 //     (this.Age = age),
-//     (this.Location = location);
-//   // suppose that we want to change age we will have to declear inside that constructor fucntion
-//   //   this.changeAge = function (newAge) {    // method
-//   //     this.chageAge = newAge;
-//   //   };
+// (this.Location = location);
+// suppose that we want to change age we will have to declear inside that constructor fucntion
+//   this.changeAge = function (newAge) {    // method
+//     this.chageAge = newAge;
+//   };
 // };
 // //person1.chnageAge(29)
 // let person1 = new Person("rajesh", "saini", 22, "india");
 // console.log(person1);
 
 //now in case of prototype we can add any properties or method outside of the constructor
-example:-1
+example: -1;
 
 // function Student(firstName, lastName, age, location) {
 //   (this.FirstName = firstName),
@@ -31,16 +31,16 @@ example:-1
 // let student2 = new Student ("virendra", "verma", 21, "india")
 // console.log(student1)
 // console.log(student2)
-example:-2
+example: -2;
 // function Person(first, last, age, eye) {
 //     this.firstName = first;
 //     this.lastName = last;
 //     this.age = age;
 //     this.eyeColor = eye;
 //   }
-  
+
 //   Person.prototype.nationality = "English";
-  
+
 //   const myFather = new Person("John", "Doe", 50, "blue");
 // console.log(myFather.nationality) //English
 
@@ -52,9 +52,9 @@ example:-2
 // let arr = [1,2,3,4,5]
 // arr.myFunction()
 
-example:-1
+example: -1;
 //map polyfills
-// prototype With Map function 
+// prototype With Map function
 
 // Array.prototype.myMap = function (callbackfn){
 //     console.log(this)
@@ -72,8 +72,7 @@ example:-1
 // })
 // console.log(result)
 
-
-example:-2
+example: -2;
 //map:- OR:- the map method is use  for creating new array from exiting array
 // by applying function to each one of the element of the first array
 
@@ -94,7 +93,7 @@ example:-2
 //     }
 //     return newArr
 // }
-// function square (x){ 
+// function square (x){
 //     return x*x;
 // }
 
@@ -102,15 +101,14 @@ example:-2
 // let mappedArr = arr.myMap(square)
 // console.log(mappedArr)
 
-example:-2
+example: -2;
 //Prototype with Filter
 //Filter:- Filter:- the filter method takes each element in a array and apply a it
-//   conditional statement againts that 
+//   conditional statement againts that
 // If the conditional returns true the element get pushed into output array ,
-//  if conditional is false then element does’t get push into the output array 
-// Fitler return only those element from the array whice fullfilled  provided those 
-//  creatria 
-
+//  if conditional is false then element does’t get push into the output array
+// Fitler return only those element from the array whice fullfilled  provided those
+//  creatria
 
 // //normal Filter
 // let arr = [1,2,3,4,5]
@@ -136,16 +134,16 @@ example:-2
 // let filterArr = arr.myFilter(isEven)
 // console.log(filterArr)
 
-example:-3
+example: -3;
 //prototype with Reduce
 //Reduce:- The reduce() method runs a function on each array element
 // to produce (reduce it to) a single value.
 
 //Normal Reduce:-
-let arr = [1,2,3,4,5]
-let sum = arr.reduce((acc ,curr =0) => {
-return acc+curr;
-},0)
-console.log(sum)
+let arr = [1, 2, 3, 4, 5];
+let sum = arr.reduce((acc, curr = 0) => {
+  return acc + curr;
+}, 0);
+console.log(sum);
 
 //Reduce with Prototype:-
