@@ -82,13 +82,13 @@ example: -1; //Map
 // let mappedArr = arr.myMap(square)
 // console.log(mappedArr)
 
-example:-2
+example: -2;
 //we have to multiply  3 in each element with the help of prototype map
 // Array.prototype.myMap = function (callbackfn){
 //     let newArr = []
 //     for(let i =0; i<this.length;i++){
 //         newArr.push(callbackfn(this[i]))
-        
+
 //     }
 //     return newArr
 // }
@@ -98,12 +98,12 @@ example:-2
 // })
 // console.log(multiplyThree)
 
-Example:-3 //Map with Prototype
+Example: -3; //Map with Prototype
 //we have to dived all element from 2 with the help of Map prototype
 // Array.prototype.myMap = function (callbackfn){
 // let newArr = []
 // for (let i =0; i <this.length; i++){
-//     newArr.push(callbackfn(this[i])) 
+//     newArr.push(callbackfn(this[i]))
 // }
 // return newArr;
 // }
@@ -114,7 +114,7 @@ Example:-3 //Map with Prototype
 
 // console.log(divisibleByTwo)
 
- //Filter
+//Filter
 //Prototype with Filter
 //Filter:- Filter:- the filter method takes each element in a array and apply a it
 //   conditional statement againts that
@@ -122,14 +122,14 @@ Example:-3 //Map with Prototype
 //  if conditional is false then element does’t get push into the output array
 // Fitler return only those element from the array whice fullfilled  provided those
 //  creatria
-Example:-1
- //normal Filter
+Example: -1;
+//normal Filter
 // let arr = [1,2,3,4,5]
 // let moreThanTwo = arr.filter((num)=>{
 //     return num>2
 // })
 // console.log(moreThanTwo)
-Example:-1
+Example: -1;
 //Prototype Filter
 // Array.prototype.myFilter = function (callbackfn) {
 //     let newArr = []
@@ -147,22 +147,23 @@ Example:-1
 // let filterArr = arr.myFilter(isEven)
 // console.log(filterArr)
 
-Example:-2 // filter with prototype // create polyfills for filter
+Example: -2; // filter with prototype // create polyfills for filter
 //we have to print those number is grater than 3 with the help of filter prototype
-Array.prototype.myFilter = function (callbackfn){
-    let newArr = []
-    for(i=0;i<this.length;i++){
-        if(callbackfn(this[i]))
-        newArr.push((this[i]))
-    }
-    return newArr;
-}
-let arr = [1,2,3,4,5,6,7,8,9]
-let checkGreaterThanTwo = arr.myFilter((num)=>{
-    return num>2
-})
-console.log(checkGreaterThanTwo)
-example: -1; //Reduce 
+// Array.prototype.myFilter = function (callbackfn){
+//     let newArr = []
+//     for(i=0;i<this.length;i++){
+//         if(callbackfn(this[i]))
+//         newArr.push((this[i]))
+//     }
+//     return newArr;
+// }
+// let arr = [1,2,3,4,5,6,7,8,9]
+// let checkGreaterThanTwo = arr.myFilter((num)=>{
+//     return num>2
+// })
+// console.log(checkGreaterThanTwo)//3,4,5,6,7,8,9
+
+example: -1; //Reduce
 //prototype with Reduce
 //Reduce:- The reduce() method runs a function on each array element
 // to produce (reduce it to) a single value.
@@ -175,11 +176,16 @@ example: -1; //Reduce
 // console.log(sum);
 
 //23/08/2022
-//Reduce with Prototype:- 
-//we have to sum geven array with reduce using prototype
-// Array.prototype.myreduce = function (callcackfun){
-//     let accumulator  = initialvalue
-//     for(let i = 0; i<this.length;i++){
-        
-//     }
-// }
+//Reduce with Prototype:-
+//we have to do sum given array with the help of prototype Reduce
+Array.prototype.myReduce = function (callbackfn) {
+  let newArr = [];
+  for (let i = 0; i < this.length; i++) {
+    newArr.push(callbackfn(this[i]));
+  }
+};
+let arr = [1, 2, 3, 4, 5, 6, 7];
+let sum = arr.reduce((acc, curr) => {
+  return acc + curr;
+},10);
+console.log(sum);
