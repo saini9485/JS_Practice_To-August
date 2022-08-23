@@ -212,8 +212,8 @@ var minus = (function () {
  
 })();
 
-minus(); 
-minus();
+minus(); //998
+minus();//997
 minus();//996  
 
 

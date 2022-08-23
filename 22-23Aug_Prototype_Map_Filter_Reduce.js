@@ -16,7 +16,7 @@
 // console.log(person1);
 
 //now in case of prototype we can add any properties or method outside of the constructor
-example: -1;
+example: -1; //constructor Class
 
 // function Student(firstName, lastName, age, location) {
 //   (this.FirstName = firstName),
@@ -31,7 +31,8 @@ example: -1;
 // let student2 = new Student ("virendra", "verma", 21, "india")
 // console.log(student1)
 // console.log(student2)
-example: -2;
+
+example: -2; //constructor Class
 // function Person(first, last, age, eye) {
 //     this.firstName = first;
 //     this.lastName = last;
@@ -52,27 +53,7 @@ example: -2;
 // let arr = [1,2,3,4,5]
 // arr.myFunction()
 
-example: -1;
-//map polyfills
-// prototype With Map function
-
-// Array.prototype.myMap = function (callbackfn){
-//     console.log(this)
-//     let newArray = []
-//     for(let i = 0; i<this.length; i++)
-//     newArray.push(callbackfn(this[i]))
-// }
-
-// return newArray;
-
-// let nums = [1,2,3,4,5];
-// let result = nums.myMap(function (num){
-//     console.log(num)
-//     return num*2
-// })
-// console.log(result)
-
-example: -2;
+example: -1; //Map
 //map:- OR:- the map method is use  for creating new array from exiting array
 // by applying function to each one of the element of the first array
 
@@ -87,7 +68,7 @@ example: -2;
 
 // Array.prototype.myMap = function (callbackfn){
 //     let newArr = []
-//     for(let i =0 ; i<this.length ; i++){
+//     for(let i =0 ; i<this.length ; i++){    //here this pointed to the parent object
 //         newArr.push(callbackfn(this[i]))
 
 //     }
@@ -101,7 +82,39 @@ example: -2;
 // let mappedArr = arr.myMap(square)
 // console.log(mappedArr)
 
-example: -2;
+example:-2
+//we have to multiply  3 in each element with the help of prototype map
+// Array.prototype.myMap = function (callbackfn){
+//     let newArr = []
+//     for(let i =0; i<this.length;i++){
+//         newArr.push(callbackfn(this[i]))
+        
+//     }
+//     return newArr
+// }
+// let arr = [1,2,3,4,5,6]
+// let multiplyThree = arr.myMap((num)=>{
+//     return num*3
+// })
+// console.log(multiplyThree)
+
+Example:-3 //Map with Prototype
+//we have to dived all element from 2 with the help of Map prototype
+// Array.prototype.myMap = function (callbackfn){
+// let newArr = []
+// for (let i =0; i <this.length; i++){
+//     newArr.push(callbackfn(this[i])) 
+// }
+// return newArr;
+// }
+// let arr = [1,2,3,4,5,6,7]
+// let divisibleByTwo = arr.myMap((num)=>{
+//     return num%2
+// })
+
+// console.log(divisibleByTwo)
+
+ //Filter
 //Prototype with Filter
 //Filter:- Filter:- the filter method takes each element in a array and apply a it
 //   conditional statement againts that
@@ -109,20 +122,20 @@ example: -2;
 //  if conditional is false then element does’t get push into the output array
 // Fitler return only those element from the array whice fullfilled  provided those
 //  creatria
-
-// //normal Filter
+Example:-1
+ //normal Filter
 // let arr = [1,2,3,4,5]
 // let moreThanTwo = arr.filter((num)=>{
 //     return num>2
 // })
 // console.log(moreThanTwo)
-
+Example:-1
 //Prototype Filter
 // Array.prototype.myFilter = function (callbackfn) {
 //     let newArr = []
 //     for (let i = 0; i<this.length; i++){
-//         if(isEven(this[i]))
-//     newArr.push(callbackfn(this[i]))
+//         if(callbackfn(this[i]))
+//     newArr.push((this[i]))
 
 // }
 // return newArr;
@@ -134,7 +147,22 @@ example: -2;
 // let filterArr = arr.myFilter(isEven)
 // console.log(filterArr)
 
-example: -3;
+Example:-2 // filter with prototype // create polyfills for filter
+//we have to print those number is grater than 3 with the help of filter prototype
+Array.prototype.myFilter = function (callbackfn){
+    let newArr = []
+    for(i=0;i<this.length;i++){
+        if(callbackfn(this[i]))
+        newArr.push((this[i]))
+    }
+    return newArr;
+}
+let arr = [1,2,3,4,5,6,7,8,9]
+let checkGreaterThanTwo = arr.myFilter((num)=>{
+    return num>2
+})
+console.log(checkGreaterThanTwo)
+example: -1; //Reduce 
 //prototype with Reduce
 //Reduce:- The reduce() method runs a function on each array element
 // to produce (reduce it to) a single value.
@@ -146,10 +174,12 @@ example: -3;
 // }, 0);
 // console.log(sum);
 
+//23/08/2022
 //Reduce with Prototype:- 
-for (var i = 0; i < 3; i++) {
-  setTimeout(function() { 
-    console.log (i);
-   }, 1000 +i); // 3 3 3 
-}//
-
+//we have to sum geven array with reduce using prototype
+// Array.prototype.myreduce = function (callcackfun){
+//     let accumulator  = initialvalue
+//     for(let i = 0; i<this.length;i++){
+        
+//     }
+// }
