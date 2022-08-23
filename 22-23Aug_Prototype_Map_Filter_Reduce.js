@@ -82,8 +82,7 @@ example: -1; //Map
 // let mappedArr = arr.myMap(square)
 // console.log(mappedArr)
 
-example: -2;
-//we have to multiply  3 in each element with the help of prototype map
+example: -2; /*we have to multiply  3 in each element with the help of prototype map */
 // Array.prototype.myMap = function (callbackfn){
 //     let newArr = []
 //     for(let i =0; i<this.length;i++){
@@ -96,7 +95,7 @@ example: -2;
 // let multiplyThree = arr.myMap((num)=>{
 //     return num*3
 // })
-// console.log(multiplyThree)
+// console.log(multiplyThree) //[ 3, 6, 9, 12, 15, 18 ]
 
 Example: -3; //Map with Prototype
 //we have to dived all element from 2 with the help of Map prototype
@@ -129,8 +128,8 @@ Example: -1;
 //     return num>2
 // })
 // console.log(moreThanTwo)
-Example: -1;
-//Prototype Filter
+
+Example: -1; //Prototype Filter
 // Array.prototype.myFilter = function (callbackfn) {
 //     let newArr = []
 //     for (let i = 0; i<this.length; i++){
@@ -145,7 +144,7 @@ Example: -1;
 // }
 // let arr = [1,2,3,4,5,2,16,7,9]
 // let filterArr = arr.myFilter(isEven)
-// console.log(filterArr)
+// console.log(filterArr) //[ 2, 4, 2, 16 ]
 
 Example: -2; // filter with prototype // create polyfills for filter
 //we have to print those number is grater than 3 with the help of filter prototype
@@ -176,8 +175,9 @@ example: -1; //Reduce
 // console.log(sum);
 
 //23/08/2022
-//Reduce with Prototype:-
-//we have to do sum given array with the help of prototype Reduce
+Example:-1  //Reduce with Prototype:-
+/*we have to do sum given array with the help of prototype Reduce*/ 
+
 Array.prototype.myReduce = function (callbackfn) {
   let newArr = [];
   for (let i = 0; i < this.length; i++) {
@@ -187,5 +187,6 @@ Array.prototype.myReduce = function (callbackfn) {
 let arr = [1, 2, 3, 4, 5, 6, 7];
 let sum = arr.reduce((acc, curr) => {
   return acc + curr;
-},10);
-console.log(sum);
+},10); //here initialvalue is 10 
+console.log(sum);//38
+
