@@ -119,24 +119,132 @@ Example:-4
 
 Example:-5  /*The call() Method with Arguments*/
 //The call() method can accept arguments:
+// const person = {
+//   fullName: function(city, country) {
+//     return (this.Greet + " " + "This Side" +" " +this.firstName + " " + this.lastName + "," + city + "," + country);
+//   }
+// }
+
+// const person1 = {
+//   Greet: "Hi",
+//   firstName:"Rajesh",
+//   lastName: "Saini"
+// }
+
+// const person2 = {
+//   Greet: "Hi",
+//   firstName:"Virendra",
+//   lastName: "Verma"
+// }
+// console.log(person.fullName.call(person1, "Noida", "India"));  //Hi This Side Rajesh Saini,Noida,India
+// console.log(person.fullName.call(person2, "Lucknow", "India")); //Hi This Side Virendra Verma,Lucknow,India
+
+
+/*1. Polyfills For Apply */
+//it is similar to the call method but it takes second parameter as array 
+
+Example:-1
+// const person = {
+//   fullName: function() {
+//     return (this.Greet + " " + "This Side" +" " +this.firstName + " " + this.lastName);
+//   }
+// }
+
+// const person1 = {
+//   Greet: "Hi",
+//   firstName:"Rajesh",
+//   lastName: "Saini"
+// }
+// console.log(person.fullName.apply(person1)); //Hi This Side Rajesh Saini
+
+
+// Example:-2
+// //The apply() Method with Arguments:-
+// const person = {
+//   fullName: function(City,Country) {
+//     return (this.Greet + " " + "This Side" +" " +this.firstName + " " + this.lastName + "," + City + "," + Country);
+//   }
+// }
+
+// const person1 = {
+//   Greet: "Hi",
+//   firstName:"Rajesh",
+//   lastName: "Saini"
+// }
+// console.log(person.fullName.apply(person1, ["Noida", "India"]));  //Hi This Side Rajesh Saini,Noida,India
+
+// The Difference Between call() and apply()
+// The difference is:
+// The call() method takes arguments separately.
+// The apply() method takes arguments as an array.
+
+
+/*JavaScript Function bind()*/
+//Function Borrowing
+//With the bind() method, an object can borrow a method from another object.
+//Here I create  2 objects (person1 and person2).
+//The member object borrows the fullname method from the person object:
+Example:-1
+// const person1 = {
+//   firstName:"Rajesh",
+//   lastName: "saini",
+//   fullName: function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// const person2 = {
+//   firstName:"virendra",
+//   lastName: "Verma",
+// }
+// let fullName = person1.fullName.bind(person2);
+// console.log(fullName()); //virendra Verma
+
+
+
+// Preserving this:- 
+// Sometimes the bind() method has to be used to prevent loosing this.
+// In the following example, the person object has a display method. 
+// In the display method, this refers to  the person object:
+
+Example:-1
+// const person = {
+//   firstName:"Rajesh",
+//   lastName: "Saini",
+//   display: function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+
+// console.log(person.display()); //Rajesh Saini
+
+/*When a function is used as a callback, this is lost.
+This example will try to display the person name after 3 seconds, 
+but it will display undefined instead:*/
+
+ Example:-2 /*using Callback Function*/
+// const person = {
+//   firstName:"Rajesh",
+//   lastName: "Saini",
+//   display: function() {
+//     let Result =( this.firstName + " " + this.lastName);
+//     console.log(Result)
+//   }
+// }
+//  setTimeout(person.display, 3000); //undefined undefined
+
+/*The bind() method solves this problem.
+In the following example, the bind() method is used to bind person.display to person.
+This example will display the person name after 3 seconds:*/
+
+Example:-3
 const person = {
-  fullName: function(city, country) {
-    return (this.Greet + " " + "This Side" +" " +this.firstName + " " + this.lastName + "," + city + "," + country);
+  firstName:"Rajesh",
+  lastName: "Saini",
+  display: function () {
+    let x =  this.firstName + " " + this.lastName;
+    console.log(x)
   }
 }
 
-const person1 = {
-  Greet: "Hi",
-  firstName:"Rajesh",
-  lastName: "Saini"
-}
-
-const person2 = {
-  Greet: "Hi",
-  firstName:"Virendra",
-  lastName: "Verma"
-}
-console.log(person.fullName.call(person1, "Noida", "India")); 
-console.log(person.fullName.call(person2, "Lucknow", "India")); 
-
-
+let display = person.display.bind(person);
+setTimeout(display, 3000);
