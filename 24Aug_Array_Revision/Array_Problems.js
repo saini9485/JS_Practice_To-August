@@ -67,6 +67,8 @@ question:-9 /*merge two given array  */
 let arr1 = [1, 2, 3, 4, 5, 9, 6, 8]
 let arr2 = [0,9,8,7,1, 2, 3, 4 ]
 //let arr3 = [...arr1 ,...arr2]  // [1, 2, 3, 4, 5, 9, 6, 8 ,0,9,8,7,1, 2, 3, 4]
-let arr3 = arr1.concat(arr2)
+let arr3 = arr1.concat(arr2) // [1, 2, 3, 4, 5, 9, 6, 8 ,0,9,8,7,1, 2, 3, 4]
 console.log(arr3)
+
+question:-10 /* how did you do desctrucring array*/
 

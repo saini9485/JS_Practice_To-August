@@ -185,19 +185,19 @@ Example:-1
 //Here I create  2 objects (person1 and person2).
 //The member object borrows the fullname method from the person object:
 Example:-1
-// const person1 = {
-//   firstName:"Rajesh",
-//   lastName: "saini",
-//   fullName: function() {
-//     return this.firstName + " " + this.lastName;
-//   }
-// }
-// const person2 = {
-//   firstName:"virendra",
-//   lastName: "Verma",
-// }
-// let fullName = person1.fullName.bind(person2);
-// console.log(fullName()); //virendra Verma
+const person1 = {
+  firstName:"Rajesh",
+  lastName: "saini",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person2 = {
+  firstName:"virendra",
+  lastName: "Verma",
+}
+let fullName = person1.fullName.bind(person2);
+console.log(fullName()); //virendra Verma
 
 
 
@@ -237,14 +237,14 @@ In the following example, the bind() method is used to bind person.display to pe
 This example will display the person name after 3 seconds:*/
 
 Example:-3
-const person = {
-  firstName:"Rajesh",
-  lastName: "Saini",
-  display: function () {
-    let x =  this.firstName + " " + this.lastName;
-    console.log(x)
-  }
-}
+// const person = {
+//   firstName:"Rajesh",
+//   lastName: "Saini",
+//   display: function () {
+//     let x =  this.firstName + " " + this.lastName;
+//     console.log(x)
+//   }
+// }
 
-let display = person.display.bind(person);
-setTimeout(display, 3000);
+// let display = person.display.bind(person);
+// setTimeout(display, 3000); // Rajesh Saini

@@ -174,13 +174,12 @@ example:- 9
 // console.log(other());
 // console.log(other());
 
-example:-10
-
-for (var i = 0; i < 3; i++) {
-  setTimeout(function() { 
-    console.log (i);
-   }, 1000 +i); // 3 3 3 
-}//
+example:-10 /*what will be output*/
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(function() { 
+//     console.log (i);
+//    }, 1000); // 3 3 3 
+//}
 
 example:-11   
 
