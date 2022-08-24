@@ -146,8 +146,8 @@ Example: -1; //Prototype Filter
 // let filterArr = arr.myFilter(isEven)
 // console.log(filterArr) //[ 2, 4, 2, 16 ]
 
-Example: -2; // filter with prototype // create polyfills for filter
-//we have to print those number is grater than 3 with the help of filter prototype
+Example: -2; // create polyfills for filter 
+/*we have to print those number is grater than 3 with the help of filter prototype*/
 // Array.prototype.myFilter = function (callbackfn){
 //     let newArr = []
 //     for(i=0;i<this.length;i++){
@@ -168,25 +168,25 @@ example: -1; //Reduce
 // to produce (reduce it to) a single value.
 
 //Normal Reduce:-
-// let arr = [1, 2, 3, 4, 5];
-// let sum = arr.reduce((acc, curr = 0) => {
-//   return acc + curr;
-// }, 0);
-// console.log(sum);
+let arr = [1, 2, 3, 4, 5];
+let sum = arr.reduce((acc, curr = 0) => {
+  return acc + curr;
+}, 0);
+console.log(sum);
 
 //23/08/2022
 Example:-1  //Reduce with Prototype:-
 /*we have to do sum given array with the help of prototype Reduce*/ 
 
-Array.prototype.myReduce = function (callbackfn) {
-  let newArr = [];
-  for (let i = 0; i < this.length; i++) {
-    newArr.push(callbackfn(this[i]));
-  }
-};
-let arr = [1, 2, 3, 4, 5, 6, 7];
-let sum = arr.reduce((acc, curr) => {
-  return acc + curr;
-},10); //here initialvalue is 10 
-console.log(sum);//38
+// Array.prototype.myReduce = function (callbackfn) {
+//   let newArr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     newArr.push(callbackfn(this[i]));
+//   }
+// };
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// let sum = arr.reduce((acc, curr) => {
+//   return acc + curr;
+// },10); //here initialvalue is 10 
+// console.log(sum);//38
 
