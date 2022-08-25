@@ -191,6 +191,7 @@ Example:-5 //fetching data to easy way
 
 
 Topic:-5 // Try  and Catch Method 
+Example:-1
 async function test() {
     try{
         let response = await fetch("url API");
@@ -200,7 +201,7 @@ async function test() {
         console.log(error)
     }
   }
- test().then((storeData)=>{
-    console.log(storeData) 
+ test().then((storeresult)=>{
+    console.log(storeresult) 
  })
  
