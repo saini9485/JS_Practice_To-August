@@ -19,4 +19,5 @@ const addCurry = (a) => { // takes one argument
         }
     }
 }
-console.log(addCurry(1)(2)(3)); //6
+console.log(addCurry(1)(2)(3)); //6 
+
