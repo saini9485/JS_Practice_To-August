@@ -60,9 +60,9 @@ Topic:-2/*Temporal dead_Zone */
 /* */
 
 Example:-1 /* in Case of var */
-console.log(x);
+console.log(x); //undefine
     var x = 6;
-    console.log(x); //
+    console.log(x); // 6
 
 
 Example:-2
@@ -73,3 +73,17 @@ Example:-2
 	// console.log(x);
 	// console.log(z);
 
+
+    Topic:-3 /*Event Loop */
+Example:- 1
+    const lunch = () => console.log("It's time for lunch!");
+
+    const dinner = () => console.log("It's time for dinner!");
+    
+    const breakfast = () => {
+      console.log("Time to breakfast!");
+      setTimeout(lunch, 3000);
+      dinner();
+    };
+    
+    breakfast();
