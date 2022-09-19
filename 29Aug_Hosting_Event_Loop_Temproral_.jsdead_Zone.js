@@ -2,17 +2,17 @@ Topic:-1 /*Hosting*/
 //in javascript , when we can access the variable without declration 
 
 Exaple:-0
-// using test before declaring
+//using test before declaring
 // console.log(test);   // undefined
 // var test;
 
 Example:-1
-// name()
-// console.log(a)
-// var a =10;
-// function name(){
-//     console.log("Rajesh")
-// } //Rajesh , 10 => before running the code allocate undefine in mermory creation phase
+name()
+console.log(a)
+var a =10;
+function name(){
+    console.log("Rajesh")
+} //Rajesh , 10 => before running the code allocate undefine in mermory creation phase
 
 
 // Example:-2

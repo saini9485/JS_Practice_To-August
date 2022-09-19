@@ -44,14 +44,22 @@ Topic:-4 /*Deep Copy and shallow copy */
 
 Topic:-5 /* Implementation of debouncing */
 Exaple:-1 
-const debounce = (func, wait) => {  
-    let timeout;  
-    return function mainFunction(...args) {  
-      const later = () => {  
-        clearTimeout(timeout);  
-        func(...args);  
-      };  
-      clearTimeout(timeout);  
-      timeout = setTimeout(delay, wait);  
-    };  
-  };  
+// const debounce = (func, wait) => {  
+//     let timeout;  
+//     return function mainFunction(...args) {  
+//       const later = () => {  
+//         clearTimeout(timeout);  
+//         func(...args);  
+//       };  
+//       clearTimeout(timeout);  
+//       timeout = setTimeout(delay, wait);  
+//     };  
+//   };  
+
+Topic:-6 /*networking */
+// Store
+localStorage.setItem("lastname", "Smith");
+
+// Retrieve
+let data = localStorage.getItem("lastname");
+console.log(data)
