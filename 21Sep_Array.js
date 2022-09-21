@@ -87,6 +87,59 @@ method:-13 // reduce ->
 // console.log(sum)//25 
 
 method:-14 //array destrucring 
-let array = [1,2,3,4,5,6,7]
-let [num1,,num2]=array;
-console.log(num1,num2)
+// let array = [1,2,3,4,5,6,7]
+// let [num1,,num2]=array;
+// console.log(num1,num2)
+
+method:-15 // find the minimum value in given array
+// let arr =[1,5,7,9,2,3,12]
+// min =arr[0]
+// for(i=0;i<arr.length;i++){
+//     if(min>arr[i]){
+//         min = arr[i]
+//     }
+// }
+// console.log(min)
+
+method:-16 // find the max value in given array
+// let arr =[1,5,7,9,2,3,12]
+// max =arr[0]
+// for(i=0;i<arr.length;i++){
+//     if(max<arr[i]){
+//         max = arr[i]
+//     }
+// }
+// console.log(max)
+
+ method:-17 //find the sum of array 
+// let arr = [1,2,3,4,5,6,7]
+// let sum = 0;
+// for(i=0;i<arr.length;i++){
+//     sum += arr[i]
+// }
+// console.log(sum)
+
+
+method:-18 //find the even number using loop
+// let arr = [1,2,3,4,5,6,8,10]
+// let even = []
+// for(i=0;i<arr.length;i++){
+//     if(arr[i]/2==0){
+// even.push(arr[i])
+//     }
+// }
+// console.log(even)
+
+
+//find even number in array
+let arr = [1,2,3,4,5,6]
+let even = []
+for(i=0;i<arr.length;i++){
+    if(arr[i]%2==0){
+        even.push(arr[i])
+    }  
+}
+console.log(even)
+
+
+
