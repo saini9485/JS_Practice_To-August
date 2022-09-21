@@ -86,8 +86,8 @@ Example:-2
   
 //   // 👉️ [{name: 'Bob', age: 40}, {name: 'Carl', age: 30}]
 //   console.log(results);
-  
-  //Reduce function 
+  Example:-1
+  //3. Reduce function 
   const message = ["JavaScript ", "is ", "fun."];
 
 // function to join each string elements
