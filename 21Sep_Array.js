@@ -121,17 +121,6 @@ method:-16 // find the max value in given array
 
 
 method:-18 //find the even number using loop
-// let arr = [1,2,3,4,5,6,8,10]
-// let even = []
-// for(i=0;i<arr.length;i++){
-//     if(arr[i]/2==0){
-// even.push(arr[i])
-//     }
-// }
-// console.log(even)
-
-
-//find even number in array
 let arr = [1,2,3,4,5,6]
 let even = []
 for(i=0;i<arr.length;i++){
@@ -140,6 +129,8 @@ for(i=0;i<arr.length;i++){
     }  
 }
 console.log(even)
+
+
 
 
 

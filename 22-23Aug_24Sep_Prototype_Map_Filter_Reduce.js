@@ -6,30 +6,30 @@
 //     (this.LastName = lastName), //properties
 //     (this.Age = age),
 // (this.Location = location);
-// suppose that we want to change age we will have to declear inside that constructor fucntion
+// // suppose that we want to change age we will have to declear inside that constructor fucntion
 //   this.changeAge = function (newAge) {    // method
 //     this.chageAge = newAge;
 //   };
-// };
-// //person1.chnageAge(29)
+//  };
+// person1.chnageAge(29)
 // let person1 = new Person("rajesh", "saini", 22, "india");
 // console.log(person1);
 
 //now in case of prototype we can add any properties or method outside of the constructor
 example: -1; //constructor Class
 
-// function Student(firstName, lastName, age, location) {
-//   (this.FirstName = firstName),
-//     (this.LastName = lastName),
-//     (this.Age = age),
-//     (this.Location = location);
-// }
-// // //now we to add some properties and method extra we can add outside of the constructor
+function Student(firstName, lastName, age, location) {
+  (this.FirstName = firstName),
+    (this.LastName = lastName),
+    (this.Age = age),
+    (this.Location = location);
+}
+ //now we to add some properties and method extra we can add outside of the constructor
 
-// Student.prototype.state = "UP"
-// let student1 = new Student ("rajesh", "saini", 22, "india")
-// let student2 = new Student ("virendra", "verma", 21, "india")
-// console.log(student1)
+Student.prototype.location = "USA"
+let student1 = new Student ("rajesh", "saini", 22, "india")
+let student2 = new Student ("virendra", "verma", 21, "india")
+console.log(student1)
 // console.log(student2)
 
 example: -2; //constructor Class
@@ -168,11 +168,11 @@ example: -1; //Reduce
 // to produce (reduce it to) a single value.
 
 //Normal Reduce:-
-let arr = [1, 2, 3, 4, 5];
-let sum = arr.reduce((acc, curr = 0) => {
-  return acc + curr;
-}, 0);
-console.log(sum);
+// let arr = [1, 2, 3, 4, 5];
+// let sum = arr.reduce((acc, curr = 0) => {
+//   return acc + curr;
+// }, 0);
+// console.log(sum);
 
 //23/08/2022
 Example:-1  //Reduce with Prototype:-
