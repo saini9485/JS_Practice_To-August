@@ -10,27 +10,30 @@
 // *diffeent between closure and lexical envirement 
 // Lexical scope and function tothegar called closure 
 //1.in case of normal function
-function counter (){
-    var  count = 1;
-    count++;
-  console.log(count)
+// function counter (){
+//     var  count = 1;
+//     count++;
+//   console.log(count)
   
-  }
-  counter()//2
-  counter()//2
-  counter()//2
+//   }
+//   counter()//2
+//   counter()//2
+//   counter()//2
   //in case of normal function will 2 always whatever time i will call 
   //because it lose our previous memory means destroye our previous value
   //that't why it is printing 2 again and again 
   //because it will every time diffent deffent  memory
   
   // 
-  // var  count = 1;
-  // function counter (){
-  //     count++;
-  //   console.log(count)
+  let  count = 1;
+  function counter (){
+      count++;
+    console.log(count)
     
-  //   }
-  //   counter()
-  //   counter()
-  //   counter()
+    }
+    counter() //2
+    counter() //3
+    counter()//4
+    //beacuse it will not loss the value it will reatain the value 
+
+    

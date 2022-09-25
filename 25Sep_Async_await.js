@@ -50,3 +50,19 @@ async function dinnerScenario() {
 //     .then((result) => console.log("process over", result))
 //     .catch((err) => console.log("error", err))
 //     .finally(() => console.log("closing connection"));
+
+Example:-2 //with Await
+async function test () {
+    console.log("2:Hello")
+     await console.log("3:Hello")
+    console.log("4:Hello")
+   }
+   console.log("1:Hello")
+test()
+console.log("5:Hello")
+
+/*1:Hello
+2:Hello
+3:Hello
+5:Hello
+4:Hello*/
