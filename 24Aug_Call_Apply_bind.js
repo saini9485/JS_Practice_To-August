@@ -119,25 +119,30 @@ Example:-4
 
 Example:-5  /*The call() Method with Arguments*/
 //The call() method can accept arguments:
-// const person = {
-//   fullName: function(city, country) {
-//     return (this.Greet + " " + "This Side" +" " +this.firstName + " " + this.lastName + "," + city + "," + country);
-//   }
-// }
+const person = {
+  fullName: function(city, country) {
+    return (this.Greet + " " + "This Side" +" " +this.firstName + " " + this.lastName + "," + city + "," + country);
+  }
+}
 
-// const person1 = {
-//   Greet: "Hi",
-//   firstName:"Rajesh",
-//   lastName: "Saini"
-// }
+const person1 = {
+  Greet: "Hi",
+  firstName:"Rajesh",
+  lastName: "Saini"
+}
 
-// const person2 = {
-//   Greet: "Hi",
-//   firstName:"Virendra",
-//   lastName: "Verma"
-// }
-// console.log(person.fullName.call(person1, "Noida", "India"));  //Hi This Side Rajesh Saini,Noida,India
-// console.log(person.fullName.call(person2, "Lucknow", "India")); //Hi This Side Virendra Verma,Lucknow,India
+const person2 = {
+  Greet: "Hi",
+  firstName:"Virendra",
+  lastName: "Verma"
+}
+console.log(person.fullName.call(person1, "Noida", "India"));  //Hi This Side Rajesh Saini,Noida,India
+console.log(person.fullName.call(person2, "Lucknow", "India")); //Hi This Side Virendra Verma,Lucknow,India
+
+
+
+
+
 
 
 /*1. Polyfills For Apply */
@@ -185,19 +190,19 @@ Example:-1
 //Here I create  2 objects (person1 and person2).
 //The member object borrows the fullname method from the person object:
 Example:-1
-const person1 = {
-  firstName:"Rajesh",
-  lastName: "saini",
-  fullName: function() {
-    return this.firstName + " " + this.lastName;
-  }
-}
-const person2 = {
-  firstName:"virendra",
-  lastName: "Verma",
-}
-let fullName = person1.fullName.bind(person2);
-console.log(fullName()); //virendra Verma
+// const person1 = {
+//   firstName:"Rajesh",
+//   lastName: "saini",
+//   fullName: function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// const person2 = {
+//   firstName:"virendra",
+//   lastName: "Verma",
+// }
+// let fullName = person1.fullName.bind(person2);
+// console.log(fullName()); //virendra Verma
 
 
 
@@ -248,3 +253,4 @@ Example:-3
 
 // let display = person.display.bind(person);
 // setTimeout(display, 3000); // Rajesh Saini
+
