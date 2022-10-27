@@ -100,3 +100,4 @@ let joinedString = message.reduce(joinStrings);
 console.log(joinedString);
 
 // Output: JavaScript is fun.
+
