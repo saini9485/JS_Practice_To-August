@@ -24,15 +24,15 @@ example:-1
 // }
 // outerFunction(5) //20 
 
-// function outerFunction (a){
-//     let b = 10 
-//     function innerFunction (){
-//         let sum = a + b   ; 
-//         console.log(sum )
-//     }
-//     innerFunction ()
-// } 
-// outerFunction (5) //15 
+function outerFunction (a){
+    let b = 10 
+    function innerFunction (){
+        let sum = a + b   ; 
+        console.log(sum )
+    }
+    innerFunction ()
+} 
+outerFunction (5) //15 
 
 
 // d= 15

@@ -26,10 +26,9 @@ function createPerson (name, age, place){
         place:place,
     }
 }
-
 const Rajesh = createPerson("rajesh",22,"noida")
 const Riyaj = createPerson("Riyaj",23,"Sultanpur")
 const Virendra = createPerson("Virendra",21,"Meerut")
-console.log(Rajesh)
-console.log(Riyaj)
-console.log(Virendra)
+console.log(Rajesh)  //{ name: 'rajesh', age: 22, place: 'noida' }
+console.log(Riyaj) //{ name: 'Riyaj', age: 23, place: 'Sultanpur' }
+console.log(Virendra)//{ name: 'Virendra', age: 21, place: 'Meerut' }
