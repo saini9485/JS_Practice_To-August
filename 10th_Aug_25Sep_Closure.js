@@ -19,7 +19,7 @@
 //   counter()//2
 //   counter()//2
 //   counter()//2
-  //in case of normal function will 2 always whatever time i will call 
+  //in case of normal function will 2 always whatever time i will  call 
   //because it lose our previous memory means destroye our previous value
   //that't why it is printing 2 again and again 
   //because it will every time diffent deffent  memory
